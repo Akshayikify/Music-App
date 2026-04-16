@@ -1,0 +1,166 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: radial-gradient(circle at center, #111 0%, #000 100%);
+    color: white;
+}
+
+/* MAIN LAYOUT */
+.main-container {
+    display: flex;
+    height: 100vh;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* LEFT: MUSIC PLAYER */
+.music-player {
+    width: 350px;
+    height: 600px;
+    background: linear-gradient(to bottom, #111, #000);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* COVER IMAGE */
+.cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cover img {
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+}
+
+/* TITLE */
+.titre {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.titre h3 {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 5px;
+}
+
+.titre h1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* PLAYER CONTROLS (NEXT/PREV) */
+.music-player center {
+    margin: 15px 0;
+}
+
+.music-player a {
+    color: #1db954;
+    transition: 0.3s;
+}
+
+.music-player a:hover {
+    color: #1ed760;
+    transform: scale(1.2);
+}
+
+/* AUDIO PLAYER */
+.lecteur {
+    margin-top: 10px;
+}
+
+/* CUSTOM MEDIAELEMENT PLAYER */
+.mejs__container {
+    background: transparent !important;
+}
+
+.mejs__controls {
+    background: transparent !important;
+    display: flex;
+    align-items: center;
+}
+
+/* PLAY BUTTON */
+.mejs__playpause-button button {
+    font-size: 22px;
+    color: #1db954;
+}
+
+/* PROGRESS BAR */
+.mejs__time-current {
+    background: #1db954 !important;
+}
+
+.mejs__time-total {
+    background: rgba(255,255,255,0.2) !important;
+}
+
+/* TIME TEXT */
+.mejs__time span {
+    color: white;
+    font-size: 12px;
+}
+
+/* VOLUME */
+.mejs__volume-button button {
+    color: #1db954;
+}
+
+/* RIGHT SIDE (LYRICS) */
+.right-section {
+    flex: 1;
+    background: linear-gradient(to bottom, #0a0a0a, #000);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    overflow-y: auto;
+}
+
+/* LYRICS */
+.lyrics {
+    font-size: 36px;
+    line-height: 1.8;
+    color: #1db954;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* SCROLLBAR */
+.right-section::-webkit-scrollbar {
+    width: 6px;
+}
+
+.right-section::-webkit-scrollbar-thumb {
+    background: #1db954;
+    border-radius: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .music-player {
+        width: 90%;
+    }
+
+    .right-section {
+        width: 90%;
+        margin-top: 20px;
+    }
+}
